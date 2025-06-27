@@ -1,0 +1,756 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy; /*'Poppins', sans-serfi; */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black !important;
+    color: #fff; 
+    margin: 0;  
+    padding: 0;
+}
+
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.custom-navbar {
+    /* background: rgba(0, 0, 0, 0.7); */
+    width: 100%;
+    z-index: 1050;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: rgb(242, 242, 242) !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    position: relative;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(0, 195, 255);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after,
+.navbar-nav .nav-item .nav-link.active::after {
+    width: 100%;
+}
+
+.logo-nav-bar {
+    width: 35%;
+    height: 7%;
+}
+.navbar .dropdown-menu {
+    background: rgba(0,0,0,0.6);
+    border: none;
+    box-shadow: none;
+    margin-top: 0.5rem;
+    min-width: auto;
+    width: max-content;
+    position: absolute; 
+    right: 0; 
+    left: auto; 
+    padding: 0.25rem 0.75rem;
+}
+
+.navbar-nav .nav-item.dropdown {
+    position: relative;
+}
+
+/* Optional: Make dropdown items' text white for visibility */
+.navbar .dropdown-menu .dropdown-item {
+    color: #fff;
+}
+
+.navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    background: rgba(0,195,255,0.2); /* subtle highlight on hover */
+    color: #fff;
+}
+
+#heroCarousel {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+.carousel-item {
+    position: relative; /* This is critical! */
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    padding: 25px 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-caption h1 {
+    font-size: 4.5vw; 
+    color: white;
+    display: flex;
+    font-family: w3-cursive;
+    margin-top: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.carousel-caption h1 span {
+    font-family: w3-cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption p {
+    font-size: 1.8vw;
+    color: #f0f0f0;
+    margin-top: 15px;
+
+}
+
+@media (max-width: 767.98px) {
+    .carousel-caption {
+        padding: 10px 5px;
+        max-width: 95vw;
+    }
+    .carousel-caption h1 {
+        font-size: 7vw;
+    }
+}
+
+.container {
+    padding: 8% 15px;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+/* ------------------------------- CONTACT SECTION ------------------------------- */
+
+#contact {
+    padding: 50px 0;
+    color: #ababaa;
+}
+/* #contact .container {
+    padding: 50px 15px;
+    background-color: linear-gradient(#E9D29B, #7D601D);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+} */
+.contact1 {
+    padding: 10px;
+    flex-basis: 100%;
+    text-align: center;
+    color: #090909;
+}
+.contact1 h1.sub-title {
+    color: rgb(254, 250, 250);
+    margin-bottom: 30px;
+}
+.contact1 p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e4dede;
+}
+.contact1 p svg {
+    margin-right: 10px;
+    color: #5d9373;
+}
+.social-icons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0 15px;
+    color: rgb(135, 187, 217);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover {
+    color:#5d9373;
+    transform: translateY(-5px);
+}
+
+/* ----------experiences------------- */
+#experiences{
+    padding: 120px 80px 80px 80px;
+    color: #ffffff;
+}
+#experiences .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* #experiences .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+} */
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* 
+.about-col-1, .about-col-2{
+    margin: 0 20px;
+} */
+
+.about-col-1{
+    flex-basis: 35%; 
+}
+.about-col-1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff !important;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}    
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0095ff;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ol li{
+    list-style: disc;
+    margin: 10px 0;
+}
+.tab-contents span,p{
+    color: #82c4f7;
+    font-size: 16px;
+}
+.tab-contents ol li span{
+    color: #f5f9fc;
+    list-style: disc;
+    /* font-size: 14px; */
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ------------------------------- LEADERSHIP SECTION ------------------------------- */
+#leadership {
+    padding: 50px 0;
+    color: #ababaa;
+    background-color: #030303; /*#F0EAD6; /* Keep your existing background */
+}
+
+#leadership .sub-title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(9, 8, 8);
+    /* font-family: w3-cursive; Copperplate, Papyrus, fantasy, "Lucida Console", "Courier New", monospace; */
+    margin-bottom: 40px; /* Add some space below the title */
+}
+
+.leadership-content {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    gap: 30px; /* Space between nav and details */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.leadership-nav {
+    flex-basis: 25%; /* Take up 25% of the width on larger screens */
+    min-width: 150px; /* Minimum width for the navigation */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Space between navigation links */
+    font-family: w3-cursive;
+    /*background: rgba(0, 0, 0, 0.7); /* Background for the nav */
+    /*padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
+}
+
+.leadership-link {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: rgb(255, 255, 255); /* Link color */
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-bottom: 5px; /* Space for the underline effect */
+}
+
+.leadership-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background:  rgb(0, 195, 255);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.leadership-link:hover::after,
+.leadership-link.active-leadership-link::after {
+    width: 100%;
+}
+
+.leadership-link:hover {
+    color: rgb(236, 236, 249);
+    transform: translateX(5px); /* Slight hover effect */
+}
+
+.leadership-link.active-leadership-link {
+    color: rgb(241, 244, 250); /* Active link color */
+    font-weight: 700;
+}
+
+.leadership-details {
+    flex-basis: 70%; /* Take up 70% of the width on larger screens */
+    flex-grow: 1; /* Allow it to grow and fill available space */
+    position: relative; /* For absolute positioning of detail items */
+    min-height: 400px; /* Ensure a minimum height for the detail area */
+}
+
+.leadership-detail-item {
+    position: absolute; /* Position items on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    background: transparent;/*linear-gradient(  rgb(0, 195, 255),  rgb(3, 25, 32)); /*background for detail item */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    opacity: 0; /* Hidden by default */
+    transform: scale(0.95); /* Slightly scaled down when hidden */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* overflow-y: auto; Allow scrolling if content overflows */
+}
+
+.leadership-detail-item.active-leadership-detail {
+    opacity: 1; /* Visible when active */
+    transform: scale(1); /* "Blown up" to full size */
+    z-index: 1; /* Bring to front */
+}
+
+.leadership-detail-item img {
+    width: 100%;
+    max-height: 55vh; /* Adjust max height for image */
+    object-fit: contain; /* Contain the image within its area */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    display: block;
+
+}
+
+.leadership-detail-item .detail-text {
+    flex-grow: 1; /* Allow text to take remaining space */
+    text-align: center;
+    color: white;
+}
+
+.leadership-detail-item h4 {
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-family: Copperplate, Papyrus, fantasy, "Lucida Console", "Courier New", monospace;
+    font-weight: 600;
+    color: rgb(253, 248, 248);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+.leadership-detail-item h5 {
+    font-size: clamp(14px, 2.2vw, 20px);
+    font-family: Copperplate, Papyrus, fantasy, "Lucida Console", "Courier New", monospace;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.leadership-detail-item ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 25px;
+    margin: 10px 0;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.leadership-detail-item ul li {
+    font-size: clamp(14px, 1.8vw, 17px);
+    margin-bottom: 8px;
+    color: white;
+    font-family: Bodoni MT, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .leadership-content {
+        flex-direction: column; /* Stack nav and details vertically on small screens */
+        align-items: stretch; /* Stretch to full width */
+    }
+
+    .leadership-nav {
+        flex-basis: auto; /* Auto width */
+        flex-direction: row; /* Display links horizontally */
+        justify-content: center; /* Center horizontally */
+        flex-wrap: wrap; /* Allow links to wrap */
+        margin-bottom: 20px; /* Space below nav */
+    }
+
+    .leadership-link {
+        font-size: 16px; /* Smaller font for links */
+        margin: 5px 10px; /* Adjust spacing */
+    }
+
+    .leadership-details {
+        min-height: 500px; /* Adjust min-height for mobile if needed */
+    }
+
+    .leadership-detail-item img {
+        max-height: 200px; /* Smaller image on mobile */
+    }
+}
+
+/* ------------------------------- SKILLS SECTION ------------------------------- */
+
+#skills {
+    padding: 20px 0;
+    /* padding: 65px 0; */
+    color: #ffffff;
+    
+}
+#skills .sub-title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(243, 241, 241);
+    /* font-family: w3-cursive; Copperplate, Papyrus, fantasy, "Lucida Console", "Courier New", monospace; */
+    margin-bottom: 40px; /* Add some space below the title */
+}
+
+/* Ensure the skill containers are also a consistent size */
+#skills .col {
+    padding: 5px; /* Slightly reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /*overflow: hidden;*/
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+    /* Adjusted for a more compact size */
+    padding: 2px;            /* Less padding */
+    height: 60px;            /* Smaller skill box */
+    margin: 2px;             /* Less margin between boxes */
+}
+
+#skills .row {
+    justify-content: center;
+    margin-bottom: 30px;
+    display: flex; /* Ensure rows use flexbox for proper wrapping */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    max-height: 300px;  
+    max-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+}
+
+
+.skill-level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 30px auto; */
+    margin-top:10vh;
+    margin-bottom: 5vh; 
+}
+
+#skills .row{
+    margin-bottom: 30px;
+}
+
+.skill-level h2 {
+    font-size: 25px;
+    font-weight: 800;
+    /* font-family: monospace, cursive, 'Times New Roman', Times, serif; */
+    color: white;
+    padding: 0;
+}
+
+#skills .col:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05); /* Slightly less dramatic scale on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+.col img {
+    width: 40px; /* Smaller icon size */
+    height: 40px; /* Smaller icon size */
+    margin: 2px;
+    object-fit: contain;
+    transform-origin: center center; 
+    margin-bottom: 5px; /*Reduced margin */
+}
+
+.col h2 {
+    font-size: 13px; /* Smaller font size for skill names */
+    font-weight: 500;
+    color: white;
+    margin-top: 0;
+}
+/* ------------------------------- PROJECTS SECTION ------------------------------- */
+#projects {
+    padding: 80px 0;
+    color: #fffefe; /* Default text color */
+}
+
+#projects .sub-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fefffe; /* Match green accent */
+}
+
+.projects-list {
+    display: grid;
+    /* This creates a responsive grid: 
+       - auto-fit: creates as many columns as can fit.
+       - minmax(300px, 1fr): Each column will be at least 300px wide, and then
+         they will share the remaining space equally (1fr). */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px; /* Space between project cards */
+    margin-top: 30px;
+    padding: 0 20px; /* Optional: padding for the grid within the container */
+}
+
+.project-item {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    height: 350px; /* Fixed height for consistent card sizes - adjust as needed */
+    background-color: #fff; /* White background for the card */
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%; /* Make image fill the whole card */
+    object-fit: cover; /* Covers the area, cropping if aspect ratios don't match */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.project-layer {
+    width: 100%;
+    height: 100%; /* Occupies full height of the item initially */
+    background: linear-gradient(rgba(0,0,0,0.7), rgb(0, 195, 255)); /* Darker overlay with your green accent */
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* Use flexbox for content alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* White text for readability on dark overlay */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s; /* Smooth transition for overlay */
+}
+
+.project-layer h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.project-layer p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #eee; /* Slightly lighter text for description */
+}
+
+.project-layer .tech-stack {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.project-layer .tech-stack span {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: 500;
+}
+
+.project-layer .project-links {
+    margin-top: auto; /* Pushes links to the bottom if content is short */
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+.project-layer .project-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex; /* For icon and text alignment */
+    align-items: center;
+    gap: 5px;
+}
+
+.project-layer .project-links a:hover {
+    background-color: rgb(0, 195, 255); /* Match accent color on hover */
+}
+
+.project-layer .project-links a i {
+    font-size: 18px;
+}
+
+/* Hover Effects */
+.project-item:hover img {
+    transform: scale(1.1); /* Image zooms slightly */
+}
+
+.project-item:hover .project-layer {
+    opacity: 1; /* Overlay becomes visible */
+}
+
+a.btn {
+    display: block;
+    width: fit-content;
+    background: #1e03b6;
+    color: rgb(247, 244, 244);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.experiences_btn {
+    display: block;
+    margin: 50px auto 0;
+    width: fit-content;
+    background: #1e03b6;
+    color: rgb(247, 244, 244);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn span{
+    color: rgb(181, 225, 239);
+    font-family:Copperplate, Papyrus, fantasy, "Lucida Console", "Courier New", monospace;
+}
+
+a.btn:hover {
+    background-color:rgb(0, 195, 255);
+}
