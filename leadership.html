@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharlyn Barreto's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cd5e13e8a5.js" crossorigin="anonymous"></script> 
+
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="logoSB.png" alt="image" class="logo-nav-bar"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experiences.html">Experiences</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leadership.html">Leadership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toogle" href="#resume" id="resumeDropdown" role="button" aria-expanded="false">Resume</a>
+                            <ul class="dropdown-menu" aria-labelledby="resumeDropdown">
+                   
+                            <a href="./SharlynBarreto'sResume.pdf" target="_blank" class="dropdown-item btn btn2">View Resume</a>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+        </nav>
+ <!------------------------------------- LEADERSHIP SECTION --------------------------------->
+    <div id="leadership">
+        <div class="container">
+            <h1 class="sub-title">Leadership</h1>
+            <div class="leadership-content">
+                <div class="leadership-nav">
+                    <p class="leadership-link active-leadership-link" data-target="colorstack-detail">ColorStack</p>
+                    <p class="leadership-link" data-target="ascend-detail">ASCEND</p>
+                    <p class="leadership-link" data-target="alpfa-detail">ALPFA</p>
+                </div>
+                <div class="leadership-details">
+                    <div class="leadership-detail-item active-leadership-detail" id="colorstack-detail">
+                        <img src="ColorStack.jpg" alt="Group photo of ColorStack club at Queens College.">
+                        <div class="detail-text">
+                            <h4>Club: ColorStack <BR> Role: Treasurer <h4>
+                            <h5>September 2024 - Present</h5>  
+                        </div>
+                    </div>
+                    <div class="leadership-detail-item" id="ascend-detail">
+                        <img src= "ASCEND.jpg" alt="Group photo of ASCEND club at Queens College.">
+                        <div class="detail-text">
+                            <h4>Club: ASCEND <br> Role: Director Of Marketing</h4>
+                            <h5>September 2024 - Present</h5>
+                        </div>
+                    </div>
+                    <div class="leadership-detail-item" id="alpfa-detail">
+                        <img src="ALPFA.png" alt="Group photo of ALPFA club at an office visit.">
+                        <div class="detail-text">
+                            <h4>Club: ALPFA <br> Role: Event Coordinator</h4>
+                            <h5>September 2025 - Present</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const leadershipLinks = document.querySelectorAll('.leadership-link');
+    const leadershipDetailItems = document.querySelectorAll('.leadership-detail-item');
+
+    leadershipLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active class from all links
+            leadershipLinks.forEach(l => l.classList.remove('active-leadership-link'));
+            // Add active class to the clicked link
+            this.classList.add('active-leadership-link');
+
+            // Get the target detail item ID
+            const targetId = this.dataset.target;
+
+            // Hide all detail items
+            leadershipDetailItems.forEach(item => item.classList.remove('active-leadership-detail'));
+
+            // Show the target detail item
+            document.getElementById(targetId).classList.add('active-leadership-detail');
+        });
+    });
+});
+
+</script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+ </body>
+ </html>

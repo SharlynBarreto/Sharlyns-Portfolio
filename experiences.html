@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharlyn Barreto's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cd5e13e8a5.js" crossorigin="anonymous"></script> 
+
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="logoSB.png" alt="image" class="logo-nav-bar"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experiences.html">Experiences</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leadership.html">Leadership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="skills.html">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toogle" href="#resume" id="resumeDropdown" role="button" aria-expanded="false">Resume</a>
+                            <ul class="dropdown-menu" aria-labelledby="resumeDropdown">
+                   
+                            <a href="./SharlynBarreto'sResume.pdf" target="_blank" class="dropdown-item btn btn2">View Resume</a>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+        </nav>
+       
+ <!------------------------------------- EXPIRENCES SECTION --------------------------------->
+
+    <div id="experiences">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                
+                <div class="about-col-1">
+                    <img src="background1.png" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Experiences</h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'MorganStanley')">Morgan Stanley</p>
+                        <p class="tab-links" onclick="opentab(event, 'Anassa')">Anassa Taverna</p>
+                        <p class="tab-links" onclick="opentab(event, 'CharterHS')">Williamsburg Charter Highschool</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="MorganStanley">
+                        <h1 class="sub-title-role"><span><b>Software Engineer Intern</b></span></h1>
+                        <!-- <div class= para> <p><b>January 2025</b></p>
+                        <p><b>New York, NY</b></p></div> -->
+                    <!-- </div> -->
+                        <ol>
+                            <li><span>Designed schema for all resource types in Ansible Automation Platform (AAP).</span></li>
+                            <li><span>Upgraded technology change management procedure to support granular resource level validation in AAP.</span></li>
+                            <li><span>Streamlined emergency request system enabling 40% faster resolution of high-severity incident tickets.</span></li>
+                        </ol>
+                    </div>
+                    <div class="tab-contents" id="Anassa">
+                        <p class="sub-title-role"><span><b>Bartender</b></span></p>
+                        <!-- <div class= para> <p><b>March 2023</b></p>
+                        <p><b>New York, NY</b></p></div> -->
+                    <!-- </div> -->
+                        <ol>
+                            <li><span>Delivered a 95% customer satisfaction rate by interacting with over 80+ clients daily and providing personalized service.</span></li>
+                            <li><span>Resolved 10+ inventory and customer issues weekly, reducing service-related problems by 20%.</span></li>
+                            <li><span>Managed 15+ orders and processed payments simultaneously while organizing 250+ inventory items weekly with 98% accuracy.</span></li>
+                        </ol>
+                    </div>
+                    <div class="tab-contents" id="CharterHS">
+                        <p class="sub-title-role"><span><b>Teacher Intern</b></span></p>
+                        <!-- <div class= para> <p><b>March 2020</b></p>
+                        <p><b>New York, NY</b></p></div> -->
+                    <!-- </div> -->
+                        <ol>
+                            <li><span>Collaborated with faculty to individually map 100+ lesson plans for 30+ students, increasing graduation rates by 55%.</span></li>
+                            <li><span>Incorporated a survey identifying prevalent student interests, increasing student participation and retention by 60%.</span></li>
+                            <li><span>Conducted monthly emotional check-ins & behavioral drills with students to practice emotional coping strategies.</span></li>                          
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- //////////////////////////// ///////////////////////// -->
+ <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(event, tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script> 
+        var sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+ </body>
+ </html>
